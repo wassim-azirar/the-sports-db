@@ -1,0 +1,24 @@
+<form [formGroup]="leaguesForm">
+  <mat-form-field class="full-width">
+    <input type="text" placeholder="Search by league" aria-label="Number" matInput formControlName="leagues" [matAutocomplete]="auto" />
+    <button mat-button matPrefix mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-button matSuffix mat-icon-button (click)="clearSelection()">
+      <mat-icon aria-hidden="false" aria-label="icon">close</mat-icon>
+    </button>
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)='getTeams($event.option.value)'>
+      <mat-option *ngFor="let option of filteredLeagues | async" [value]="option">
+        {{ option.strLeague }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let team of teams" class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <app-team [team]="team" (teamClicked)="onTeamClick($event)"></app-team>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.example-card {
+  margin: 10px;
+  padding: 20px 0px 0px 15px;
+  background: #f9f9f9;
+}
+
+.mat-card-avatar {
+  border-radius: unset;
+  width: 70px;
+}
+
+::ng-deep mat-card > mat-card-header {
+  margin: 10px;
+  min-height: 90px
+}
+
+::ng-deep mat-card > mat-card-header > div.mat-card-header-text {
+  margin: -10px 0px 0px 20px;
+}
+
+::ng-deep mat-card-header > div.mat-card-header-text > mat-card-title {
+  font-weight: bold;
+}
+
+::ng-deep mat-card-header > div.mat-card-header-text > mat-card-subtitle {
+  color: #13142f;
+}

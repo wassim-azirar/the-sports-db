@@ -1,0 +1,17 @@
+mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.spacer {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.back {
+  font-size: 14px;
+  color: #587dea;
+  font-weight: bold;
+}

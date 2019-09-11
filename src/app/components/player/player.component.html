@@ -1,0 +1,15 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <img mat-card-image [src]="getImage()" />
+      </div>
+      <mat-card-title>{{ player.strPlayer }}</mat-card-title>
+      <mat-card-subtitle>
+        <div>
+          {{ player.strPosition }} <br />
+          {{ player.dateBorn }} <br />
+          {{ player.strWage }}
+        </div>
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>

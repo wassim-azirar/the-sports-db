@@ -1,0 +1,11 @@
+<mat-toolbar color="secondary">
+  <mat-toolbar-row>
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    <div class="back" (click)="goBack()">Back</div>
+    <span class="spacer">{{ teamName }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div *ngFor="let player of players">
+  <app-player [player]="player"></app-player>
+</div>
